@@ -85,7 +85,7 @@ def login(decoded_data):
     }
     
     body = {
-        "inviterUserId": "5496274031",
+        "inviterUserId": "7297908766&",
         "extInfo": {
             "hash": decoded_data['hash'],
             "auth_date": decoded_data['auth_date'],

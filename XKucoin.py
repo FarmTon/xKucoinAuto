@@ -203,8 +203,8 @@ def main():
         with ThreadPoolExecutor() as executor:
             executor.map(process_account, accounts)
         
-        print(f"{Fore.YELLOW}Waiting for 30 minutes before the next loop...")
-        countdown_timer(1800)  # Wait for 30 minutes before starting again
+        print(f"{Fore.YELLOW}Waiting for 5 minutes before the next loop...")
+        countdown_timer(300)  # Wait for 30 minutes before starting again
 
 if __name__ == "__main__":
     main()

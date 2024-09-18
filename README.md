@@ -12,7 +12,7 @@ Auto Claim for XKucoin Telegram Bot
 
 # Register
 
-Click the following url to register : [XKucoin Bot](https://t.me/xkucoinbot/kucoinminiapp?startapp=cm91dGU9JTJGdGFwLWdhbWUlM0ZpbnZpdGVyVXNlcklkJTNENTQ5NjI3NDAzMSUyNnJjb2RlJTNEUUJTVEFQTjM=)
+Click the following url to register : [XKucoin Bot](https://t.me/xkucoinbot/kucoinminiapp?startapp=cm91dGU9JTJGdGFwLWdhbWUlM0ZpbnZpdGVyVXNlcklkJTNENzI5NzkwODc2NiUyNnJjb2RlJTNEUVAzVzMzMzk=)
 
 # How to Use
 - [Windows](#windows)

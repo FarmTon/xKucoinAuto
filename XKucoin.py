@@ -85,7 +85,7 @@ def login(decoded_data):
     }
     
     body = {
-        "inviterUserId": "7297908766&",
+        "inviterUserId": "7297908766",
         "extInfo": {
             "hash": decoded_data['hash'],
             "auth_date": decoded_data['auth_date'],
@@ -182,44 +182,29 @@ def new_balance(cookie):
 
     response = requests.get(url, headers=headers)
     data = response.json()
-    new_balance = data.get("data").get("availableAmount")
-    print(f"{Fore.GREEN + Style.BRIGHT}New Balance: {Fore.WHITE + Style.BRIGHT}{new_balance}")
-    return new_balance
+    balance = data.get("data").get("availableAmount")
+    print(f"{Fore.CYAN + Style.BRIGHT}New Balance: {Fore.WHITE + Style.BRIGHT}{balance}")
 
 def process_account(encoded_data):
     decoded_data = decode_data(encoded_data)
-    
-    # Add a random delay between 1 to 60 secs
-    random_delay = random.randint(1, 60)
-    print(f"{Fore.YELLOW}Starting account after a random delay of {random_delay} seconds...")
-    countdown_timer(random_delay)
-
-    # Login and get session cookies
     cookie = login(decoded_data)
-    
-    # Fetch game data
     molecule = data(cookie)
-
-    # Perform tap actions
     tap(cookie, molecule)
-    
-    # Fetch new balance
     new_balance(cookie)
 
 def main():
-    clear_terminal()
-    art()
+    file_path = "data.txt"
+    while True:
+        accounts = read_data_file(file_path)
 
-    accounts = read_data_file("data.txt")
-    
-    # Process each account with random delay
-    for account in accounts:
-        process_account(account)
+        clear_terminal()
+        art()
+
+        with ThreadPoolExecutor() as executor:
+            executor.map(process_account, accounts)
         
-        # Random delay between accounts to prevent flood-ban
-        delay_between_accounts = random.randint(60, 120)
-        print(f"{Fore.YELLOW}Waiting {delay_between_accounts} seconds before processing the next account...")
-        countdown_timer(delay_between_accounts)
+        print(f"{Fore.YELLOW}Waiting for 30 minutes before the next loop...")
+        countdown_timer(1800)  # Wait for 30 minutes before starting again
 
 if __name__ == "__main__":
     main()

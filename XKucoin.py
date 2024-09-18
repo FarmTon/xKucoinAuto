@@ -32,7 +32,7 @@ def art():
  |  _  | / _` | / __|| |/ / / _ \| '__|
  | | | || (_| || (__ |   < |  __/| |   
  \_| |_/ \__,_| \___||_|\_\ \___||_| 
-""" + "\033[0m\n\033[1;96m---------------------------------------\033[0m\n\033[1;93mScript created by: Black Dragon Hacker\033[0m\n\033[1;92mJoin Telegram: \nhttps://t.me/BlackDragonHacker007\033[0m\n\033[1;91mVisit my GitHub: \nhttps://github.com/BlackDragonHacker\033[0m\n\033[1;96m---------------------------------------\033[0m\n\033[1;38;2;139;69;19;48;2;173;216;230m-------------[XKucoin Bot]-------------\033[0m\n\033[1;96m---------------------------------------\033[0m")
+""" + "\033[0m\n\033[1;96m---------------------------------------\033[0m\n\033[1;93mScript created by: Black Dragon Hacker Tweaked by FarmTon\033[0m\n\033[1;92mJoin Telegram: \nhttps://t.me/a_12ip\033[0m\n\033[1;91mVisit my GitHub: \nhttps://github.com/FarmTon\033[0m\n\033[1;96m---------------------------------------\033[0m\n\033[1;38;2;139;69;19;48;2;173;216;230m-------------[XKucoin Bot]-------------\033[0m\n\033[1;96m---------------------------------------\033[0m")
 
 def countdown_timer(seconds):
     while seconds > 0:
@@ -203,8 +203,8 @@ def main():
         with ThreadPoolExecutor() as executor:
             executor.map(process_account, accounts)
         
-        print(f"{Fore.YELLOW}Waiting for 5 minutes before the next loop...")
-        countdown_timer(300)  # Wait for 30 minutes before starting again
+        print(f"{Fore.YELLOW}Waiting for 2,5 minutes before the next loop...")
+        countdown_timer(150)  # Wait for 30 minutes before starting again
 
 if __name__ == "__main__":
     main()

@@ -203,7 +203,7 @@ def main():
         with ThreadPoolExecutor() as executor:
             executor.map(process_account, accounts)
         
-        print(f"{Fore.YELLOW}Waiting for 2,5 minutes before the next loop...")
+        print(f"{Fore.YELLOW}2,5 min before next loop, REFRESH QUERY IF YOU CANT SEE BALANCES.")
         countdown_timer(150)  # Wait for 30 minutes before starting again
 
 if __name__ == "__main__":
